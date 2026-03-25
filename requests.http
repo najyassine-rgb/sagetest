@@ -1,0 +1,60 @@
+curl -X POST http://localhost:3000/auth/register 
+-H "Content-Type: application/json" \
+-d '{"login":"test@test23.com","password":"12345678"}'
+
+### 1. Register a new user
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "login": "company2@gmail.com",
+  "password": "company1234",
+  "role" : ""
+}
+
+###
+
+### 2. Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "login": "company4@gmail.com",
+  "password": "company123"
+}
+
+# {
+#   "login": "test@test.com	",
+#   "password": "$2b$10$kFPrpazVETqq8mB.FLQ17uWgmQEEUPBG6IReAp/z5/i57rKPtDInS
+# "
+# }
+
+###
+
+
+
+### 4. Update current user
+PATCH http://localhost:3000/users/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJsb2dpbiI6ImNvbXBhbnlAZ21haWwuY29tIiwiaWF0IjoxNzc0NDQ3MDY4LCJleHAiOjE3NzQ0NTA2Njh9.DWYwccnywGnA_ROWqyONkiDEn-zZxl2fr-Ycs2k-tg4
+
+{
+  "login": "company4@gmail.com"
+}
+
+###
+
+### 5. Update password
+PATCH http://localhost:3000/users/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJsb2dpbiI6ImNvbXBhbnk0QGdtYWlsLmNvbSIsImlhdCI6MTc3NDQ0NzEyNCwiZXhwIjoxNzc0NDUwNzI0fQ.WuBRKRHyt3rrTrdofGrtGaza9_NBxfAOymo2UNj_YsU
+
+{
+  "password": "company000"
+}
+
+
+
+### 6. Get all users
+GET http://localhost:3000/users
+Authorization: Bearer YOUR_TOKEN_HERE
