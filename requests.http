@@ -7,8 +7,8 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-  "login": "company2@gmail.com",
-  "password": "company1234",
+  "login": "naj.yassine@gmail.com",
+  "password": "yassine123",
   "role" : ""
 }
 
@@ -19,8 +19,8 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-  "login": "company4@gmail.com",
-  "password": "company123"
+  "login": "naj.yassine@gmail.com",
+  "password": "yassine123"
 }
 
 # {
@@ -36,10 +36,10 @@ Content-Type: application/json
 ### 4. Update current user
 PATCH http://localhost:3000/users/me
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJsb2dpbiI6ImNvbXBhbnlAZ21haWwuY29tIiwiaWF0IjoxNzc0NDQ3MDY4LCJleHAiOjE3NzQ0NTA2Njh9.DWYwccnywGnA_ROWqyONkiDEn-zZxl2fr-Ycs2k-tg4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEyLCJsb2dpbiI6InNwQGdtYWlsLmNvbSIsImlhdCI6MTc3NDQ0OTIyMCwiZXhwIjoxNzc0NDUyODIwfQ.QKb3qTBNfac3JLXIkYX3YH9MVZtbqaDq5vvLpgvnwBQ
 
 {
-  "login": "company4@gmail.com"
+  "login": "sp1@gmail.com"
 }
 
 ###
@@ -47,10 +47,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJsb2dpb
 ### 5. Update password
 PATCH http://localhost:3000/users/me
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJsb2dpbiI6ImNvbXBhbnk0QGdtYWlsLmNvbSIsImlhdCI6MTc3NDQ0NzEyNCwiZXhwIjoxNzc0NDUwNzI0fQ.WuBRKRHyt3rrTrdofGrtGaza9_NBxfAOymo2UNj_YsU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEyLCJsb2dpbiI6InNwQGdtYWlsLmNvbSIsImlhdCI6MTc3NDQ0OTIyMCwiZXhwIjoxNzc0NDUyODIwfQ.QKb3qTBNfac3JLXIkYX3YH9MVZtbqaDq5vvLpgvnwBQ
 
 {
-  "password": "company000"
+  "password": "Sprint1"
 }
 
 
@@ -58,3 +58,19 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJsb2dpb
 ### 6. Get all users
 GET http://localhost:3000/users
 Authorization: Bearer YOUR_TOKEN_HERE
+
+
+
+
+### test devises
+POST http://localhost:3000/correspondance/devise
+Content-Type: application/json
+
+{
+  "x3_code": "abc",
+  "xrt_code": "GBP"
+}
+
+
+### get devise
+GET http://localhost:3000/correspondance/devise

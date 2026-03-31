@@ -13,4 +13,7 @@ export class User {
 
   @Column({ default: 'user' })
   role: string;
+
+  resetToken?: string;
+  resetTokenExpiry?: Date;
 }
